@@ -4,11 +4,27 @@ import "./App.css";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <h1>Hello world</h1>
-        <Weather city="Canada" />
-      </header>
+    <div className="container App">
+      <form id="search-form" class="form">
+        <input
+          type="text"
+          class="form-control"
+          autocomplete="off"
+          id="search-input"
+          placeholder="Search another city..."
+        />
+      </form>
+      <Weather city="Vancouver" />
+      <footer>
+        Coded by Sam Fuentes,
+        <a
+          href="https://github.com/Samfuentes/Vainilla-weather-app"
+          target="_blank"
+          id="open-source-link"
+        >
+          open-source on github.
+        </a>
+      </footer>
     </div>
   );
 }
