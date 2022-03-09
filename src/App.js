@@ -18,7 +18,7 @@ function App() {
       <footer>
         Coded by Sam Fuentes,
         <a
-          href="https://github.com/Samfuentes/Vainilla-weather-app"
+          href="https://github.com/Samfuentes/weather-react"
           target="_blank"
           id="open-source-link"
         >
