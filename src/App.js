@@ -4,27 +4,20 @@ import "./App.css";
 
 function App() {
   return (
-    <div className="container App">
-      <form id="search-form" class="form">
-        <input
-          type="text"
-          class="form-control"
-          autocomplete="off"
-          id="search-input"
-          placeholder="Search another city..."
-        />
-      </form>
-      <Weather city="Vancouver" />
-      <footer>
-        Coded by Sam Fuentes,
-        <a
-          href="https://github.com/Samfuentes/weather-react"
-          target="_blank"
-          id="open-source-link"
-        >
-          open-source on github.
-        </a>
-      </footer>
+    <div className="App">
+      <div className="container">
+        <Weather city="Vancouver" />
+        <footer>
+          This proyect was code by <a href="">Sam Fuentes</a>,{""} and is {""}
+          <a
+            href="https://github.com/Samfuentes/weather-react"
+            target="_blank"
+            id="open-source-link"
+          >
+            open-source on GitHub.
+          </a>
+        </footer>
+      </div>
     </div>
   );
 }
