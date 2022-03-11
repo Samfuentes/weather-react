@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import "./Weather.css";
+import FormatDate from "./FormatDate.js";
 
 export default function Weather(props) {
   const [city, setCity] = useState(" ");
@@ -15,6 +16,7 @@ export default function Weather(props) {
       wind: response.data.wind.speed,
       humidity: response.data.main.humidity,
       icon: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
+      date: new Date(response.data.dt * 1000),
     });
   }
   if (weather.ready) {
@@ -51,6 +53,9 @@ export default function Weather(props) {
             <div className="col">
               <ul>
                 {" "}
+                <li>
+                  <FormatDate date={weather.date} />{" "}
+                </li>
                 <li> Humidity: {weather.humidity}%</li>
                 <li> Wind: {weather.wind}km/h </li>
               </ul>
