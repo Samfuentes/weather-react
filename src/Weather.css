@@ -7,8 +7,12 @@ ul {
   list-style-type: none;
 }
 
-.tempInfo {
-  text-align: right;
+.col {
+  flex: 0;
+}
+
+.tempInfo1 {
+  font-size: 12px;
 }
 .temperature {
   font-size: 36px;
