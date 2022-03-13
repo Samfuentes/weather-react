@@ -6,7 +6,7 @@ import "./Weather.css";
 
 export default function WeatherInfo(props) {
   return (
-    <di className="WeatherInfo">
+    <div className="WeatherInfo">
       <h1 className="pt-5">
         {props.data.city},{props.data.country}
       </h1>{" "}
@@ -17,7 +17,7 @@ export default function WeatherInfo(props) {
         <div className="row d-flex justify-content-sm-center">
           <div className="col-4 tempInfo align-self-center">
             <span>
-              <WeatherIcon code={props.data.icon} />{" "}
+              <WeatherIcon code={props.data.icon} size={52} />{" "}
             </span>
             <WeatherTemperature celsius={props.data.temperature} />
           </div>
@@ -31,6 +31,6 @@ export default function WeatherInfo(props) {
           </div>
         </div>
       </div>
-    </di>
+    </div>
   );
 }

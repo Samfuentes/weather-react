@@ -3,6 +3,7 @@ import axios from "axios";
 import "./Weather.css";
 
 import WeatherInfo from "./WeatherInfo";
+import WeatherForecast from "./WeatherForecast";
 
 export default function Weather(props) {
   const [city, setCity] = useState(props.city);
@@ -20,6 +21,7 @@ export default function Weather(props) {
       city: response.data.name,
       country: response.data.sys.country,
       icon: response.data.weather[0].icon,
+      coord: response.data.coord,
     });
   }
 
@@ -62,6 +64,7 @@ export default function Weather(props) {
           </div>
         </div>
         <WeatherInfo data={weather} />
+        <WeatherForecast coord={weather.coord} />
       </div>
     );
   } else {
