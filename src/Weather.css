@@ -11,9 +11,25 @@ ul {
   flex: 0;
 }
 
-.tempInfo1 {
+.tempInfo {
   font-size: 12px;
 }
 .temperature {
-  font-size: 36px;
+  font-size: 64px;
+}
+
+.units {
+  position: relative;
+  top: -24px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.units a {
+  text-decoration: none;
+  font-weight: lighter;
+  color: black;
+}
+.units a:hover {
+  color: white;
 }
