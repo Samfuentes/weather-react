@@ -1,8 +1,23 @@
-.WeatherForecast {
-  text-align: center;
-}
-
 .WeatherForecast-temp-min {
   opacity: 0.5;
   margin-left: 5px;
+}
+
+.WeatherForecast .row {
+  margin-bottom: 0;
+}
+
+.changeButtons {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.changeButtons a {
+  text-decoration: none;
+  color: #293236;
+}
+
+.changeButtons a:hover {
+  color: black;
+  font-weight: bold;
 }

@@ -8,6 +8,7 @@ import WeatherForecast from "./WeatherForecast";
 export default function Weather(props) {
   const [city, setCity] = useState(props.city);
   const [weather, setWeather] = useState({ ready: false });
+  const [weatherForecast, setweatherForecast] = useState("week");
 
   function handleResponse(response) {
     setCity(props.city);
@@ -64,7 +65,10 @@ export default function Weather(props) {
           </div>
         </div>
         <WeatherInfo data={weather} />
-        <WeatherForecast coord={weather.coord} />
+        <WeatherForecast
+          coord={weather.coord}
+          weatherForecast={weatherForecast}
+        />
       </div>
     );
   } else {
